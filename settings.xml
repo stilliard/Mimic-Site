@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Standard XML syntax/rules apply, this must be VALID XML! -->
+<!-- HTML must be properly encoded and with <![CDATA[...]]> arround parts that are not. -->
+<!-- Check validation here... http://validator.w3.org/#validate_by_input -->
+<!-- validation might show some warnings but so long as it says "Passed" it will work. -->
+<settings>
+
+  <!-- Main Settings For This Site -->
+  <main>
+  	<!-- URL to mimic (must have trailing slash) -->
+	<url>http://www.bbc.co.uk/</url>
+	<!-- This Sites BASE URL/Domain (must have trailing slash) -->
+	<this_url>http://localhost/Projects/mimic/</this_url>
+	<!-- Default page to show -->
+	<default_page>index.php</default_page>
+  </main>
+  
+  <!-- Replace Statements, each occurence of the content of the "a" tag, will be replaced by the content of the "b" tag -->
+  <!-- E.g. <replace><a>Replace me</a><b>With me</b></replace> -->
+  <!-- Tip #1: Add spaces before or after words to help make sure the words dont appear in links -->
+  <!-- Tip #2: All replace content is case sensative! So UPPERCASE/lowercase will matter! -->
+  <!-- Tip #3: You can add the main setting url into the replace statements with {site}, and {request} for the current page -->
+  <!-- Tip #4: You can add HTML and html-entities in here too by adding <![CDATA[ before, and ]]> after. -->
+  <!-- E.g. <replace><a>Replace me</a><b><![CDATA[<strong>With me &copy;</strong>]]></b></replace> -->
+  <replaces>
+
+	<replace>
+	  <a>TREETZ</a>
+	  <b></b>
+	</replace>
+
+	<replace>
+	  <a>Treetz</a>
+	  <b></b>
+	</replace>
+
+	<replace>
+	  <a>treetz</a>
+	  <b>treetz</b>
+	</replace>
+
+	<replace>
+	  <a>_SWEETS</a>
+	  <b>_SWEETS_IN_BULK</b>
+	</replace>
+
+	<replace>
+	  <a> SWEETS</a>
+	  <b> SWEETS IN BULK</b>
+	</replace>
+
+	<replace>
+	  <a> Sweets</a>
+	  <b> Sweets In Bulk</b>
+	</replace>
+
+	<replace>
+	  <a> sweets</a>
+	  <b> sweets in bluk</b>
+	</replace>
+
+	<replace>
+	  <a>admin/images/header_back.jpg</a>
+	  <b>header_back.jpg</b>
+	</replace>
+
+	<replace>
+	  <a><![CDATA[<h5>We are the new innovative&nbsp;sweet shopping experience.We have four stores located in the&nbsp;UK and plans for expansion into Europe. From the feedback our regular loyal customers have given us, we felt we should provide an online shopping experience direct to you. We have customers travelling very long distances to visit our stores because we have the biggest range of pick and mix and novelty sweets in bluk. That is why we have chosen the web to offer this shopping experience to everyone.</h5>]]></a>
+	  <b><![CDATA[We have 3 retail outlets and have the bulk buying power to offer wholesale sweet prices direct to the public. To order sweets in bulk from us, select 30 bags of one variety of sweet. This will give you 3kg of sweets for an amazing price of &pound;12+VAT. There's no limits to the order quantity at this price, so get in fast this offer won't last forever!]]></b>
+	</replace>
+	
+  </replaces>
+  
+  <!-- Redirects Statements - These redirect back to the main store if found on any of these urls -->
+  <!-- If the use clicks on a link for login.php, it will just forards them onto my-site.com/login.php -->
+  <!-- Tip #1: Add a star before the link to make the redirect-link only work if its exactly the same -->
+  <!-- E.g. <redirect>login.php</redirect>  This would redirect if the url contains login.php, even login.php?a=b -->
+  <!-- E.g. <redirect>*login.php</redirect> This would redirect only if its login.php, NOT if its login.php?a=b -->
+  <redirects>
+	
+	<!-- TMP REMOVED, not needed but can be used if you want to redirect for important parts 
+	<redirect>login.php</redirect>
+	<redirect>checkout.php</redirect>
+	<redirect>register.php</redirect>
+	<redirect>shop.php?p=view_cart</redirect>
+	-->
+	
+  </redirects>
+  
+</settings>
