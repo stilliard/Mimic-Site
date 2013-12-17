@@ -9,3 +9,7 @@ This is an older lib i wrote a couple years back, originally called Mimic site b
 - Refactor methods to Ditto.php class file
 - Add support for REGEX replacements! :D
 - Consider alternative config file type instead of xml. (im not keen on on having to use <![CDATA[ for all the HTML fragments)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/stilliard/mimic-site/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
