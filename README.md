@@ -1,7 +1,18 @@
 
-![Ditto.php](http://farm9.staticflickr.com/8328/8136744506_9b20eec154_z.jpg)
+![Ditto.php](./docs/images/dittophp.png)
 
-This is an older lib i wrote a couple years back, originally called Mimic site but im slowly moving it to Ditto.php
+*Ditto.php* is a php package to mimic a site by a given URL (mimics everything, all pages, images, css, js, etc.).
+
+It also allows you to perform replacements on the pages such as repalce text strings or image paths etc.
+
+## Install
+```bash
+composer create-project stilliard/Ditto.php . dev-master
+```
+Now edit the config.json file for your setup
+
+## config.js docs
+TODO
 
 ### Todo
 - Tidy up the main index fie / refactor it a bit
