@@ -9,7 +9,7 @@ error_reporting(E_ALL ^ E_NOTICE);
 ini_set("display_errors", true);
 
 // inc casche class
-include 'cache.class.php'; 
+include '../cache.class.php'; 
 
 function encodeName($name) {
 	
@@ -91,7 +91,7 @@ if ( $cache && is_object($cache) && !$cache->needToReCache() ) {
 	
 } else { // not yet chaced, generate and save 
 
-	$xml = simplexml_load_file('settings.xml');
+	$xml = simplexml_load_file('../settings.xml');
 	
 	// Config 
 	$site 			= (string) $xml->main->url; // the site you want to mimic (with trailing slash!)
@@ -202,8 +202,8 @@ if ( $cache && is_object($cache) && !$cache->needToReCache() ) {
 		}
 		
 		curl_setopt($ch, CURLOPT_COOKIE, session_name().'='.session_id()); 
-		curl_setopt($ch, CURLOPT_COOKIEJAR, realpath('tmp/cookie.txt'));
-		curl_setopt($ch, CURLOPT_COOKIEFILE, realpath('tmp/cookie.txt'));
+		curl_setopt($ch, CURLOPT_COOKIEJAR, realpath('../tmp/cookie.txt'));
+		curl_setopt($ch, CURLOPT_COOKIEFILE, realpath('../tmp/cookie.txt'));
 		
 		$data = curl_exec($ch); 
 		curl_close($ch); 
