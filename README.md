@@ -5,22 +5,22 @@
 
 It also allows you to perform replacements on the pages such as repalce text strings or image paths etc.
 
+# TODO
+- [ ] remove config files all together, and go for everything in a main index.php file
+- [ ] include as vendor lib rather than as a project
+- [ ] but offer a blank project version that requires the main lib via composer as a boilerplate (so 2 github repo's)
+- [ ] Refactor to a main Ditto.php class inside of /src/
+- [ ] Add simple way to replace text strings
+- [ ] Add simple way to replace regex strings
+- [ ] Add helper to replace images etc.
+- [ ] Add methods for php callbacks before and after urls are loaded
+- [ ] Full http methods support (GET, POST, PUT, DELETE)
+- [ ] Add tests for replace methods
+- [ ] Clean up
+
 ## Install
 ```bash
-composer create-project stilliard/Ditto.php . dev-master
+composer create-project stilliard/Ditto.php-starter-project . dev-master
 ```
-Now edit the config.json file for your setup
-
-## config.js docs
-TODO
-
-### Todo
-- Tidy up the main index fie / refactor it a bit
-- Clean up the file/directory structure
-- Refactor methods to Ditto.php class file
-- Add support for REGEX replacements! :D
-- Consider alternative config file type instead of xml. (im not keen on on having to use <![CDATA[ for all the HTML fragments)
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/stilliard/mimic-site/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
+This sets up an index.php file with an example config inside and a .htacess file to route all requests to it.
+It also has a composer.json and auto requires in the stilliard/Ditto.php main lib
